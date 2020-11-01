@@ -76,44 +76,49 @@
 
     <main role="main">
         <!-- Kopstuk -->
-
-        <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">
-                <!-- <img src="img/newLogo.jpg" alt="nnLogo" class="card-img-left"> -->
-
                 <h2 class="display-4">NeutralNews,</h2>
                 <h2 class="display-3">comment page</h2>
                 <hr>
             </div>
         </div>
-        <div class="container">
-            <h3>People said this,</h3>
-            <div class="card card-body bg-light">Basic Well</div>
+
+
+        <div class="container" id="commentbox">
+            <h3>People said this:</h3>
+            <div class="card card-body bg-light">Tell us what you think. <br><br> NeutralNews.</div>
+            <!-- <div class="card card-body bg-light" id="tag-id"></div> -->
         </div>
 
         <!-- Comments -->
         <br><br><br><br>
+        <br><br><br><br>
         <div class="container">
             <div class="card card-body bg-light">
-                <h2>Leave us a Comment</h2>
-                <form>
-                    <textarea placeholder='Add Your Comment'></textarea>
-                    <div class="btn">
-                        <input type="submit" value='Comment'>
+                <h2>Leave us a Comment,</h2>
+                <form name="commentform" method="">
+                    <input type="text" placeholder="Name" id="commentname">
+                    <br><br>
+                    <textarea placeholder='Add Your Comment' id="commenttext"></textarea>
+                    <!-- <input id="addyInput" name="addyInput" placeholder="Don't forget postcode!"> -->
+                    <br><br>
+                    <div class="btn-outline">
+                        <!-- <input type="submit" value='Comment'> -->
+                        <button value="Comment" id="commitcom">Comment</button>
                         <button id='clear'>Cancel</button>
                     </div>
                 </form>
             </div>
         </div>
 
-        <script src='plugin.js'></script>
+
 
 
 
 
     </main>
-    <br><br><br>
+
     <!-- Footer -->
 
     <footer class="page-footer font-small unique-color-dark ">
@@ -253,7 +258,7 @@
 
     </footer>
     <!-- Footer -->
-
+    <script src="comment.js"></script>
 </body>
 
 </html>

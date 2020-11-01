@@ -1,20 +1,23 @@
-var feild = document.querySelector('textarea');
-var backUp = feild.getAttribute('placeholder');
-var btn = document.querySelector('.btn');
-var clear = document.getElementById('clear')
 
-feild.onfocus = function(){
-    this.setAttribute('placeholder', '');
-    this.style.borderColor = '#333';
-    btn.style.display = 'block'
+
+
+function commitcomment() {
+    var element = document.createElement('div');
+    var text = document.getElementById("commenttext").value;
+    var comname = document.getElementById("commentname").value;
+    // var newComment = document.getElementById('tag-id').innerHTML = text;
+
+    if (text != "") {
+        event.preventDefault()
+        console.log('Adding comment');
+        element.innerHTML = "Name: " + comname + "<br><brx>" + text;
+        element.className = "card card-body bg-light";
+        document.getElementById('commentbox').appendChild(element);
+        // document.body.appendChild(element);
+
+    } else {
+        alert("Comment is empty!")
+    }
 }
 
-feild.onblur = function(){
-    this.setAttribute('placeholder',backUp);
-    this.style.borderColor = '#aaa'
-}
-
-clear.onclick = function(){
-    btn.style.display = 'none';
-    feild.value = '';
-}
+document.getElementById("commitcom").addEventListener("click", commitcomment);
