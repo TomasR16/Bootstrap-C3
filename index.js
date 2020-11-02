@@ -1,4 +1,3 @@
-
 function myFunction() {
     // Sign up username
     var a = document.forms["signup"]["username"].value;

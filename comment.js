@@ -1,6 +1,3 @@
-
-
-
 function commitcomment() {
     var element = document.createElement('div');
     var text = document.getElementById("commenttext").value;
